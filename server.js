@@ -15,6 +15,7 @@ const bodyParser = require('body-parser')
 //routes
 const indexRouter = require('./routes/index')
 const authorsRouter = require('./routes/authors')
+const booksRouter = require('./routes/books')
 
 //set
 app.set('view engine','ejs');
@@ -30,6 +31,7 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 app.use('/',indexRouter)
 app.use('/authors', authorsRouter)
+app.use('/books', booksRouter)
 
 
 

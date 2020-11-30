@@ -1,6 +1,6 @@
 const express = require('express')
 
-
+const bodyParser = require('body-parser')
 const router = express.Router()
 
 //author model
@@ -41,10 +41,12 @@ router.post('/', async (req, res) => {
         
        
         res.redirect('/authors')
-    } catch {
+    } catch(err) {
+        
         res.render('authors/new', {
             author: author,
             errorMessage: 'error creating author'
+            
         })
     }
 
