@@ -1,0 +1,13 @@
+<h2><%= book.title %></h2>
+<img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px">
+<a href="/books/<%= book.id %>/edit">edit</a>
+<%-include('../partials/updateForm', {url:`/books/${book.id}`})%>
+<br>
+<a href="/authors/<%= book.author.id %> ">view author</a>
+
+<ul>
+    <li>Author: <a href="/authors/<%= book.author.id %>"><%= book.author.name %></a></li>
+    <li>Publish Date: <%= book.publishDate.toISOString().split('T')[0]%> </li>
+    <li>Page Count: <%= book.pageCount %> </li>
+    <li>Description: <%= book.description %> </li>
+</ul>

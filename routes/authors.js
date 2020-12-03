@@ -7,6 +7,7 @@ const router = express.Router()
 const Author = require('../models/author')
 //author model
 const Book = require('../models/book')
+const { localsName } = require('ejs')
 
 //all authors route
 router.get('/', async(req, res) => {
@@ -113,7 +114,7 @@ router.delete('/:id', async(req, res)=>{
     } catch{
         if(author == null){
             res.redirect('/')
-        }else{
+        }else{                      
             res.redirect(`/authors/${author.id}`)
         }
         
