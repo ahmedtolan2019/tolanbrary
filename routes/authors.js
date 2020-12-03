@@ -5,6 +5,8 @@ const router = express.Router()
 
 //author model
 const Author = require('../models/author')
+//author model
+const Book = require('../models/book')
 
 //all authors route
 router.get('/', async(req, res) => {
@@ -51,4 +53,71 @@ router.post('/', async (req, res) => {
     }
 
 })
+
+//show author
+router.get('/:id', async(req, res)=>{
+    try {
+        const author = await Author.findById(req.params.id)
+        const books = await Book.find({author:author.id}).limit(6).exec()
+        
+        res.render('authors/show',{
+            author:author,
+            booksByAuthor: books
+        })
+    } catch {
+        res.redirect('/')
+    }
+})
+
+//edit author
+router.get('/:id/edit', async(req, res)=>{   
+
+    try {
+        const author = await Author.findById(req.params.id)
+        res.render('authors/edit',{
+            author:author
+        })  
+        
+    } catch(err) {        
+        res.redirect('/authors')
+    }
+})
+ //update author
+router.put('/:id', async(req, res)=>{
+    let author
+    try {
+        author = await Author.findById(req.params.id)
+        author.name = req.body.name
+        await author.save()
+        res.redirect(`/authors/${author.id}`)
+    } catch (err) {
+        if(author == null){
+            res.redirect('/')
+        }else{
+            res.render('authors/edit', {
+                author:author,
+                errorMessage:"error updating author"
+            })
+        }
+    }
+})
+
+//delete author
+router.delete('/:id', async(req, res)=>{
+    let author
+    try {
+        
+        author = await Author.findById(req.params.id) 
+        await author.remove()
+        res.redirect(`/authors`)
+    } catch{
+        if(author == null){
+            res.redirect('/')
+        }else{
+            res.redirect(`/authors/${author.id}`)
+        }
+        
+    }
+})
+
 module.exports = router;

@@ -1,0 +1,12 @@
+<h2><%= author.name %> </h2>
+<a href="/authors/<%= author.id %>/edit">edit</a>
+<%-include('../partials/updateForm', {url:`/authors/${author.id}`})%>
+<br>
+<%if(booksByAuthor.length>0){%>
+    <h2>books by the author</h2>
+    <% booksByAuthor.forEach(book => { %> 
+        <img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px"> 
+     <%})%>
+<%}else{%>
+    <h3>this author doesn't has any books</h3>
+<% } %> 
