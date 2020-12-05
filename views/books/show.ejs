@@ -1,13 +1,25 @@
-<h2><%= book.title %></h2>
-<img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px">
-<a href="/books/<%= book.id %>/edit">edit</a>
-<%-include('../partials/updateForm', {url:`/books/${book.id}`})%>
-<br>
-<a href="/authors/<%= book.author.id %> ">view author</a>
+<div class="show-book-container">
+    <div class="section-hero-text center">
+        <h2><%= book.title %></h2>
+    </div>
+    <div class="control-btn-container center">
+        <a class="btn show-book-btn btn-primary-yellow" href="/books/<%= book.id %>/edit">Edit</a>
+        <div class="show-book-btn"> <%-include('../partials/updateForm', {url:`/books/${book.id}`})%></div>
+        <a class="btn btn-primary-yellow show-book-btn view-author-btn" href="/authors/<%= book.author.id %> ">View Author</a>
+    </div>
+    <div class="card-container center">
+        <div class="card">
+            <img class="card-img" src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px">
+            <ul  class="card-details">
+                <li><strong>Author:</strong> <a href="/authors/<%= book.author.id %>"><%= book.author.name %></a></li>
+                <li><strong>Publish Date:</strong> <%= book.publishDate.toISOString().split('T')[0]%> </li>
+                <li><strong>Page Count:</strong> <%= book.pageCount %> </li>
+            </ul>
+            <ul class="card-description">
+            <li><strong>Description:</strong> <%= book.description %></li>
+            </ul>
+            
+        </div>
+    </div>
 
-<ul>
-    <li>Author: <a href="/authors/<%= book.author.id %>"><%= book.author.name %></a></li>
-    <li>Publish Date: <%= book.publishDate.toISOString().split('T')[0]%> </li>
-    <li>Page Count: <%= book.pageCount %> </li>
-    <li>Description: <%= book.description %> </li>
-</ul>
+</div>

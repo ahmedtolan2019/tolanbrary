@@ -1,0 +1,113 @@
+.authors-grid-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    margin-top: 10vh;
+}
+.authors-heading h2{
+  color:var(--color-text-yellow);  
+  font-weight: 900;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.search-author{
+    color: var(--color-background-dark) ;
+
+}
+.search-author input{
+    outline: none;
+    height: 45px;
+    width: 800px;
+    font-size: 35px;
+    color: var(--color-background-dark);
+    background-color: var(--color-text-white);
+    outline-style: none;
+    border: none;
+    border-radius: .3rem;
+}
+.search-author input:focus{
+    border: 2px solid var(--color-text-yellow) ;
+}
+.search-author button{
+    background-color: unset;
+    outline-style: none;
+    outline: none;
+    border: none;
+}
+.search-author button svg{
+    cursor: pointer;
+    margin-left: 10PX;
+}
+.search-author form{
+    display: flex;
+    
+}
+
+.authors-table table th, td{
+border: 1px solid var(--color-text-white) ;
+border-top: none;
+border-left: none;
+padding: 5px 20px 5px 20px;
+width: 100px;
+text-align: center;
+
+}
+.authors-table table th:last-child{
+    border-right: none;
+}
+.authors-table table th:first-child{
+    width: 600px;
+    text-align: center;
+}
+.authors-table table td:last-child{
+    border-right: none;
+}
+.authors-table table{
+    border-collapse: collapse;
+    color: var(--color-text-yellow);
+}
+.authors-table table td a{
+    text-decoration: none;
+    color: var(--color-text-yellow);
+    transition: all .1s ease-in-out;
+
+}
+.authors-table table td button{
+  background-color: unset;  
+  border: unset;
+  outline: none;
+  color: var(--color-text-red);
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  transform-origin: center;
+}
+.authors-table table td button:hover{
+    border: 1px solid var(--color-text-red);
+    border-radius: .1rem;
+    padding:0px 5px 0px 5px;
+}
+.authors-table table td a:hover{
+    border: 1px solid var(--color-text-yellow);
+    border-radius: .1rem;
+    padding:0px 5px 0px 5px;
+}
+.add-author-form{
+    display: flex;
+    flex-direction: column;
+}
+.add-author-form .create-cancel-container{
+margin-top: 2rem;
+}
+.add-author-form .create-cancel-container button{
+    border: 1px solid var(--color-text-yellow);
+    margin-left:15px;
+}
+
+.add-author-field{
+    display: flex;
+    flex-direction: column;
+    
+}
+.add-author-field label{
+    color: var(--color-text-yellow);
+    margin-bottom: .3rem;
+}

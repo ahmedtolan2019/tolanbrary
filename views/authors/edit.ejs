@@ -1,7 +1,17 @@
-<h2>Edit Author</h2>
-<br>
-<form method="POST" action="/authors/<%= author.id %>?_method=PUT">
-    <%- include('./_form_fields') %> 
- <a href="/authors/<%= author.id %>">Cancel</a>   
- <button type="submit">Update</button>
-</form>
+
+<div class="authors-grid-container">
+    <div class="authors-heading center"><h2 class="authors-hero-text">Edit Author</h2></div>
+    
+    <div class="search-author center">        
+        <form class="center add-author-form" method="POST" action="/authors/<%= author.id %>?_method=PUT">
+            <%- include('./_form_fields') %> 
+            <div class="create-cancel-container">
+         <a class="btn btn-primary-red" href="/authors/<%= author.id %>">Cancel</a>   
+         <button class="btn btn-primary-yellow" type="submit">Update</button>
+        </div>
+        </form>
+    </div>
+    <div class="authors-table center">
+       
+    </div>
+</div>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import "./shared/variables.css";
+@import "./shared/buttons.css";
+@import "./shared/header.css";
+@import "./shared/footer.css";
+@import "./shared/authors.css";
+@import "./shared/buttons.css";
+@import "./shared/show-author.css";
+@import "./shared/general.css";
+@import "./shared/books.css";
+@import "./shared/show-book.css";
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    font-family: var(--font);
+    
+    
+}
+
+.hero{
+    position: absolute;
+    top: 8vh;
+    z-index: -1;
+    
+    width: 100vw !important;
+    height: 92vh;
+    background-image: url(../assets/Mask\ Group\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;    
+    background-size: cover;
+    background-origin: content-box;
+}
+.hero::after{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,1);
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(255,255,255,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+    
+}
+
+
+.recently-added-books-images-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:80vh;
+    max-width: 1600px;
+    margin: auto;
+    
+}
+.recently-added-books-images-container div img{
+    width: 400px;
+    height: 600px;
+}
+.recently-added-books-images-container div .image-container{
+    width: 440px;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-text-yellow);
+    border-radius: .4rem;
+    transition: all .2s ease-in;
+    
+    transform-origin: center;
+}
+.recently-added-books-images-container div .image-container:hover{
+    -webkit-box-shadow: 0px 0px 11px 5px rgba(10,10,10,.6);
+    -moz-box-shadow: 0px 0px 11px 5px rgba(10,10,10,.6);
+    box-shadow: 0px 0px 11px 5px rgba(10,10,10,.6);
+  
+}
+.recently-added-books-images-container div{
+    
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-gap: 50px;
+    
+}
+.hero-text{
+    position: absolute;
+    top: -10vh;
+    color: var(--color-text-white);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 69px ;
+    text-align: center;
+}
+.hero-text .text-qoute span{
+    color: var(--color-text-yellow);
+}
+.hero-text .text-qoute-said{
+    font-size: 30px ;
+    color: var(--color-text-yellow);
+    font-weight: 400;
+    margin-top: 10px;
+
+}
+.recently-text-container{
+    color: var(--color-text-yellow) ;
+    position: absolute;
+    top: 70vh;
+    
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.recently-text-container p{
+    font-weight: 900;
+    font-size: 69px;
+    border: 1px solid var(--color-text-yellow);
+    padding: 0px 10px 0px 10px;
+}
+.SEE-text-container{
+    color: var(--color-text-yellow) ;
+    position: relative;
+    bottom: -900px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.SEE-text-container a{
+    font-weight: 900;
+    font-size: 69px;
+    border: 1px solid var(--color-text-yellow);
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    color: var(--color-text-yellow);
+    transition: color .2s ease-in;
+
+}
+.SEE-text-container a:hover{
+    color: var(--color-text-white)
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

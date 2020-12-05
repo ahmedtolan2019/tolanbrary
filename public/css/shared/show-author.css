@@ -1,0 +1,51 @@
+.show-author-container{
+    display: grid;
+    grid-template-rows: 1fr .5fr 1fr auto;
+    margin-top: 10vh;
+}
+.show-author-container .btn-container a{
+    margin-right: 2rem;
+    width: 150px;
+    text-align: center;
+    height: 45px;
+}
+.show-author-container .btn-container form button{
+    
+    width: 150px;
+    text-align: center;
+    height: 45px;
+}
+.btn-container{
+    margin-top: 1rem;
+
+}
+.books-by-author-text{
+    margin-top: 3rem;
+}
+.no-books-found h3{
+    color: var(--color-text-yellow);
+}
+.img-grid-container{
+    margin-top: 60px;
+}
+.books-by-the-author-grid{
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 60px;
+}
+.img-in-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:
+    var(--color-text-yellow) ;
+    width: 230px;
+    height: 330px;
+}
+.img-in-grid a img{
+width:200px ;
+height: 300px;
+}

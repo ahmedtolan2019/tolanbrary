@@ -1,12 +1,29 @@
-<h2><%= author.name %> </h2>
-<a href="/authors/<%= author.id %>/edit">edit</a>
-<%-include('../partials/updateForm', {url:`/authors/${author.id}`})%>
-<br>
-<%if(booksByAuthor.length>0){%>
-    <h2>books by the author</h2>
-    <% booksByAuthor.forEach(book => { %> 
-        <a href="/books/<%= book.id %>"><img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px"></a> 
-     <%})%>
-<%}else{%>
-    <h3>this author doesn't has any books</h3>
-<% } %> 
+<div class="show-author-container">
+    <div class="author-name section-hero-text center">
+        <h2><%= author.name %> </h2>
+    </div>
+    <div class="btn-container center">
+        <a class="btn btn-primary-yellow" href="/authors/<%= author.id %>/edit">Edit</a>
+        <%-include('../partials/updateForm', {url:`/authors/${author.id}`})%>
+    </div>
+    <div class="books-by-author-text text-box center">
+            <h2>Books By The Author</h2>
+    </div>
+    <div class="img-grid-container center">
+    <div class="books-by-the-author-grid">
+        <%if(booksByAuthor.length>0){%>            
+            <% booksByAuthor.forEach(book => { %>
+                <div class="img-in-grid "><a href="/books/<%= book.id %>"><img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px"
+                    width="100px"></a></div>
+            
+            <%})%>
+            <%}else{%>
+                <div class="no-books-found center"><h3>this author doesn't has any books</h3></div>
+            
+            <% } %>
+    </div>
+</div>
+</div>
+
+
+

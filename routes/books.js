@@ -157,7 +157,7 @@ async function renderFormpage(res, book, form, errMessage = 'creating', hasError
         res.render(`books/${form}`, params)
 
     } catch {
-        res.redirect('books')
+        res.redirect('/books')
     }
 }
 

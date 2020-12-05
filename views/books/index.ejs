@@ -1,27 +1,50 @@
+<div class="books-page-container">
+  <div class="section-hero-text center">
+    <h2>Search Books</h2>
+  </div>
 
+  <form class="search-book-container center" action="/books" method="GET">
+    <div class="form-item search-item">
+      <label class="form-text">Title</label>
+      <input type="text" name="title" value="<%=searchOptions.title%>">
+    </div>
+    <div class="form-item search-item">
+      <label class="form-text">Published After</label>
+      <input type="date" name="publishedAfter" value="<%=searchOptions.publishedAfter%>">
+    </div>
+    <div class="form-item search-item">
+      <label class="form-text">Published Before</label>
+      <input type="date" name="publishedBefore" value="<%=searchOptions.publishedBefore%>">
+    </div>
+    <div class="form-item search-item">
+      <button class="btn search-icon-btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50.646 50.646">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #e2e2e2;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 3px;
+            }
+          </style>
+        </defs>
+        <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
+          <path id="Path_1" data-name="Path 1" class="cls-1" d="M46.3,25.4A20.9,20.9,0,1,1,25.4,4.5,20.9,20.9,0,0,1,46.3,25.4Z"/>
+          <path id="Path_2" data-name="Path 2" class="cls-1" d="M36.339,36.339,24.975,24.975" transform="translate(15.186 15.186)"/>
+        </g>
+      </svg>
+    </button>
+    </div>
+  </form>
 
-<h2>Search Books</h2>
-
-<form action="/books" method="GET">
-<label>Title</label>
-
-<input type="text" name="title" value="<%=searchOptions.title%>">
-
-<label>Published After</label>
-
-<input type="date" name="publishedAfter" value="<%=searchOptions.publishedAfter%>">
-
-<label>Published Before</label>
-
-<input type="date" name="publishedBefore" value="<%=searchOptions.publishedBefore%>">
-<button type="submit">Search</button>
-</form>
-<br>
-
-<div>
-<% books.forEach(book => { %> 
-  <a href="/books/<%= book.id %>"><img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px"></a> 
-<%})%>
+  <div class="img-grid-container center">
+    <div class="books-by-the-author-grid">
+      <% books.forEach(book => { %>
+      <div class="img-in-grid "><a href="/books/<%= book.id %>"><img src="<%= book.coverImagePath %>"
+            alt="<%=book.title%>-Image" height="150px" width="100px"></a></div>
+      <%})%>
+    </div>
+  </div>
 
 </div>
-

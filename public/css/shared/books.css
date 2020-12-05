@@ -1,0 +1,23 @@
+.search-icon-btn{
+    width: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+    padding-top: 15px;
+}
+.search-icon-btn:hover{
+    background-color: unset;
+
+}
+.search-icon-btn svg{
+    width: 30px;
+}
+.search-item{
+    margin-left: 6rem;
+}
+.search-item:last-child{
+    margin-left: 0px;
+}
+.search-item:first-child{
+    margin-left: 0px;
+}
+

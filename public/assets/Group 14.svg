@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="274" height="52" viewBox="0 0 274 52">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #333;
+        font-family: Roboto-Black, Roboto;
+        font-weight: 800;
+      }
+
+      .cls-1 {
+        font-size: 43px;
+      }
+
+      .cls-2 {
+        font-size: 29px;
+      }
+
+      .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #333;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_14" data-name="Group 14" transform="translate(-807 -3660)">
+    <text id="TOLANLABS" class="cls-1" transform="translate(960 3701)"><tspan x="-120.759" y="0">TOLANLABS</tspan></text>
+    <g id="Group_13" data-name="Group 13" transform="translate(100.431 15.22)">
+      <text id="c" class="cls-2" transform="translate(720.569 3680.78)"><tspan x="-7.42" y="0">c</tspan></text>
+      <g id="Ellipse_1" data-name="Ellipse 1" class="cls-3" transform="translate(706.569 3658.78)">
+        <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>
+        <circle class="cls-5" cx="14.5" cy="14.5" r="14"/>
+      </g>
+    </g>
+  </g>
+</svg>

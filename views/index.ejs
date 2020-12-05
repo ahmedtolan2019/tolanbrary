@@ -1,10 +1,27 @@
-<h2>Recently Added</h2>
-
-<div>
-    <%books.forEach(book => {%>
-        <a href="/books/<%= book.id %>"><img src="<%= book.coverImagePath %>" alt="<%=book.title%>-Image" height="150px" width="100px"></a>
-    <%})%>
-    
-    
+<div class="hero">
 
 </div>
+<div class="hero-text">
+
+    <p class="text-qoute"><span>“</span>Show me a family of readers,<br>
+        and I will show you the people who move the world.<span>”</span></p>
+    <p class="text-qoute-said">Napoleon Bonaparte</p>
+</div>
+<div class="recently-text-container">
+<p>RECENTLY ADDED BOOK</p>
+</div>
+<div class="recently-added-books-images-container">
+    <div>
+        <%books.forEach(book => {%>
+        <div class="image-container"><a href="/books/<%= book.id %>"><img src="<%= book.coverImagePath %>"
+                    alt="<%=book.title%>-Image" height="150px" width="100px"></a></div>
+        <%})%>
+
+
+
+    </div>
+
+</div>
+<div class="SEE-text-container">
+    <a href="/books"><p>SEE MORE BOOKS</p></a>
+    </div>

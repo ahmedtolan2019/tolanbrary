@@ -7,18 +7,19 @@
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="/css/main.css">
     <title>tolanbrary</title>
 </head>
 
 <body>
 
-
-    <%- include('../partials/header')%>
+<div class="header"><%- include('../partials/header')%></div>
+<div class="container">
     <%- include('../partials/errorMessage')%>
-
     <%- body %>
 
+</div>
+<div class="footer"><img src="/assets/Group 14.svg" alt="copyrights tolan labs"></div>
 
     <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
@@ -27,23 +28,23 @@
 
     <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 
-    <script>
+    <!-- <script>
         FilePond.registerPlugin(
-    FilePondPluginImagePreview,
-    FilePondPluginImageResize,
-    FilePondPluginFileEncode
-);
+            FilePondPluginImagePreview,
+            FilePondPluginImageResize,
+            FilePondPluginFileEncode
+        );
 
-FilePond.setOptions({
-    stylePanelAspectRatio: 150 / 100,
-    imageResizeTargetWidth: 100,
-    imageResizeTargetHeight: 150
-})
-FilePond.parse(document.body);
-    </script>
+        FilePond.setOptions({
+            stylePanelAspectRatio: 150 / 100,
+            imageResizeTargetWidth: 100,
+            imageResizeTargetHeight: 150
+        })
+        FilePond.parse(document.body);
+    </script> -->
 
-    <!-- <script src="./javaScripts/fileUpload.js"></script> -->
-    
+    <script src="/js/fileUpload.js"></script>
+
 </body>
 
 </html>

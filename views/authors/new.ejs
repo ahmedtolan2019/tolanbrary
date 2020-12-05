@@ -1,7 +1,19 @@
-<h2>new author</h2>
-<br>
-<form action="/authors" method="POST">
-    <%- include('./_form_fields') %> 
- <a href="/authors">Cancel</a>   
- <button type="submit">Create</button>
-</form>
+
+
+
+<div class="authors-grid-container">
+    <div class="authors-heading center"><h2 class="authors-hero-text">new author</h2></div>
+    
+    <div class="search-author center">        
+        <form class="center add-author-form" action="/authors" method="POST">
+            <%- include('./_form_fields') %> 
+            <div class="create-cancel-container">
+         <a class="btn btn-primary-red" href="/authors">Cancel</a>   
+         <button class="btn btn-primary-yellow" type="submit">Create</button>
+        </div>
+        </form>
+    </div>
+    <div class="authors-table center">
+       
+    </div>
+</div>

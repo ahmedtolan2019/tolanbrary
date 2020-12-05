@@ -1,0 +1,63 @@
+.view-author-btn{
+    width: 200px;
+  font-size: 30px;
+}
+.show-book-btn{
+    margin-left: 4rem;
+}
+.show-book-btn:first-child{
+    margin-left: 0px;
+}
+.control-btn-container{
+    margin-bottom: 3rem;
+}
+.card{
+    display: grid;
+    grid-template-areas: 
+    "a b b b b b"
+    "a c c c c c"
+    "a c c c c c"  
+    "a c c c c c"
+    "a c c c c c"
+    "a c c c c c"
+    "a c c c c c"
+    "a c c c c c"
+    "a c c c c c"
+    "a c c c c c"
+    ;
+    grid-gap: 1rem;
+    background-color: var(--color-text-yellow);
+    width: 800px;
+    min-height: 330px;
+    border-radius:.3rem ;
+    padding: 15px;
+}
+.card img{
+    width: 200px;
+    height: 300px;
+    grid-area:a;
+}
+.card .card-details{
+    border: 1px solid var( --color-background-black) ;
+    border-radius:.3rem ;
+    padding: 15px;
+    grid-area: b;
+}
+.card ul li {
+    list-style: none;
+font-size: 1.2rem;
+}
+.card ul li a{
+    text-decoration: none;
+    color: var( --color-background-black);
+}
+.card ul li a:hover{
+    
+    color: var( --color-text-red);
+}
+.card-description{
+    border: 1px solid var( --color-background-black) ;
+    border-radius:.3rem ;
+    padding: 15px;
+    grid-area: c;
+}

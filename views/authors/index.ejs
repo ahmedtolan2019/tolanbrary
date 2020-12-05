@@ -1,18 +1,57 @@
-<h2>Search Authors</h2>
-
+<div class="authors-grid-container">
+    <div class="authors-heading center"><h2 class="authors-hero-text">Authors</h2></div>
+    
+    <div class="search-author center">        
 <form action="/authors" method="GET">
-    <label>Name</label>
-
     <input type="text" name="name" value="<%=searchOptions.name%>">
-    <button type="submit">Search</button>
+    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50.646 50.646">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #e2e2e2;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 3px;
+            }
+          </style>
+        </defs>
+        <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
+          <path id="Path_1" data-name="Path 1" class="cls-1" d="M46.3,25.4A20.9,20.9,0,1,1,25.4,4.5,20.9,20.9,0,0,1,46.3,25.4Z"/>
+          <path id="Path_2" data-name="Path 2" class="cls-1" d="M36.339,36.339,24.975,24.975" transform="translate(15.186 15.186)"/>
+        </g>
+      </svg></button>
 </form>
-<br>
-<% authors.forEach(author => { %>
-<div><%=author.name%></div>
-<a href="\authors\<%= author.id %> ">View</a>
-<a href="\authors\<%= author.id %>\edit">Edit</a>
+    </div>
+    <div class="authors-table center">
+        <table>
+            <tr>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+            </tr>
+            <% authors.forEach(author => { %>
+            <tr>
+                <td><%=author.name%></td>
+                <td><a href="/authors/<%= author.id %>">View</a></td>
+                <td><a href="/authors/<%= author.id %>/edit">Edit</a></td>
+                <td><%-include('../partials/updateForm', {url:`/authors/${author.id}`})  %></td>
+            </tr>
+            <%})%>
+        </table>
+    </div>
+</div>
 
 
-<%-include('../partials/updateForm', {url:`/authors/${author.id}`})  %>
-<br>
-<%})%>
+
+
+
+
+
+
+
+
+
+
+
