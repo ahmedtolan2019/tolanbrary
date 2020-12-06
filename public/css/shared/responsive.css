@@ -156,6 +156,11 @@
         transform: rotate(0deg);
         transition: transform .3s ease-in-out;
     }
+
+    .footer img{
+
+        width: 150px;
+    }
    
 
 
