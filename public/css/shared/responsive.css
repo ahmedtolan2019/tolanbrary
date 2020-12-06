@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px){
-    header nav ul a{
+    header nav .nav-links{
         display: none;
     }
     header{
@@ -34,28 +34,39 @@
         top: -15vh;
     }
     body header nav .nav-logo{
+        
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        margin-left: 50px;
+        
+        width: 100vw;
+        
         
     }
     body header nav .nav-logo a svg{
         
+        top: 1.5vh;
+       
         padding: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        
     }
     .nav{
-        padding-left: 450px;
-        display: flex;
-        justify-content:flex-end;
+        padding-left: 0px;
+        padding-right: 0px;
+        
+        justify-content:center;
         align-items: center;
        
-        max-width: 100px;
+        
+        width: 96% !important;
+        margin-left: 1vw;
     }
+   
     .container .recently-text-container{       
         top: 60vh;
                
@@ -86,4 +97,67 @@
        
     
     }
+    #responsiveNav{
+        
+        width: 50px;
+        transform: translate(-10px, 0px);
+    }
+    #line{
+        background-color: var(--color-text-white) ;
+        width: 40px;
+        height: 4px;
+        margin-top: 5px;
+    }
+    #line:first-child{
+        margin-top: 0px;
+    }
+
+    header nav #responsiveNav #hambMenu {
+        width: 100vw;
+        position: absolute;
+        top: 5.5vh;
+        left: -83vw;
+        padding-top: 15px;
+        transform: translate(0px, -400px);
+        opacity: 0;
+        transition: transform .3s ease-in-out;
+        
+        
+        background-color: var(--color-text-yellow) ;
+
+    }
+  
+    header nav #responsiveNav #hambMenu ul{
+        display: block;
+        
+    }
+    header nav #responsiveNav #hambMenu ul li a{
+        text-decoration: none;
+        color:var(--color-background-dark) ;
+        font-size: 25px;
+        
+        
+    }
+    header nav #responsiveNav #hambMenu ul li{
+        list-style: none;
+        text-align: center;
+        height: 50px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--color-background-dark);
+    }
+    header nav #responsiveNav #hambMenu ul li:last-child{
+        margin-bottom: 0px;
+        border-bottom: unset
+
+    }
+   
+
+    #line{
+        transform: rotate(0deg);
+        transition: transform .3s ease-in-out;
+    }
+   
+
+
 }
+

@@ -44,3 +44,7 @@
 .nav-link a:hover{
     color: var(--color-text-yellow);
 }
+
+header nav #responsiveNav #hambMenu ul{
+    display: none;
+}
