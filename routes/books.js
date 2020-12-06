@@ -93,6 +93,7 @@ router.get('/:id', async (req, res) => {
 //edit book
 router.get('/:id/edit', async (req, res) => {
     try {
+        
         const book = await Book.findById(req.params.id)
         renderFormpage(res, book, 'edit')
     } catch {
@@ -113,7 +114,7 @@ router.put('/:id', async (req, res) => {
         if (req.body.cover != null && req.body.cover != '') {
             saveCover(book, req.body.cover)
         }
-
+        console.log(author.id)
         await book.save()
         res.redirect(`/books/${book.id}`)
     } catch {

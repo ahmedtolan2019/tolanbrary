@@ -10,6 +10,8 @@
 @import "./shared/general.css";
 @import "./shared/books.css";
 @import "./shared/show-book.css";
+@import "./shared/new-book.css";
+@import "./shared/responsive.css";
 
 
 
@@ -93,7 +95,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .recently-added-books-images-container div{
     
     display: grid;
-    grid-template-columns:  repeat(3, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     grid-gap: 50px;
     
 }

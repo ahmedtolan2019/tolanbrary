@@ -1,0 +1,89 @@
+@media only screen and (max-width: 600px){
+    header nav ul a{
+        display: none;
+    }
+    header{
+        width: 100vw;
+    }
+   
+       
+    
+    .recently-added-books-images-container div .image-container img{
+        width: 250px;
+        height: 350px;
+    }
+   .container .recently-added-books-images-container div .image-container{
+        width: 270px;
+        height: 370px;  
+             
+    }
+    .container .recently-added-books-images-container div{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .text-qoute{
+        padding: 3rem;
+        font-size: 2rem;
+        
+    }
+    .container .hero-text .text-qoute-said{
+        font-size: 1rem;
+       
+        
+    }
+    .container .hero-text{
+        top: -15vh;
+    }
+    body header nav .nav-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 50px;
+        
+    }
+    body header nav .nav-logo a svg{
+        
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav{
+        padding-left: 450px;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+       
+        max-width: 100px;
+    }
+    .container .recently-text-container{       
+        top: 60vh;
+               
+     }
+    .container .recently-text-container p{
+       
+        font-size: 25px;
+       
+    }
+    .container .SEE-text-container{        
+        bottom: -600px;
+     }
+    .container .SEE-text-container a{
+       
+        font-size: 25px;
+      
+    }
+    .container .SEE-text-container a:hover{
+        color: var(--color-text-white)
+    }
+     .footer{
+       
+        bottom: -650px;
+    }
+    
+    .container .recently-added-books-images-container{   
+    top:65vh;
+       
+    
+    }
+}

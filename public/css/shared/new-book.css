@@ -1,0 +1,48 @@
+.new-book-form-item input,.new-book-form-item select{
+    width: 300px;
+}
+option{
+   background-color: var(--color-text-yellow);
+}
+.new-book-form-item{
+    margin-top: 20px;
+}
+.new-book-form-item:first-child{
+    margin-top: 0px;
+}
+
+.new-book-form{
+    margin-top: 10px;
+}
+.new-book-hero-text{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.new-book-form-item textarea{
+    resize: none;
+    width: 140px;
+    height: 225px;
+    margin-top: 0px;
+    border-radius: 7px;
+}
+.last-form-item{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    width: 300px;
+    margin-top: 20px;
+    grid-gap: 10px;
+}
+form .last-form-item .form-description{
+   margin-top: 0px;
+}
+
+.form-btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.form-btns .form-btn{
+    width: 140px;
+}
+
+

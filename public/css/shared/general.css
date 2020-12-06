@@ -31,6 +31,28 @@
     border: none;
     border-radius: .1rem;
 }
+.form-item select{
+    outline: none;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    color: var(--color-background-dark);
+    background-color: var(--color-text-white);
+    outline-style: none;
+    border: none;
+    border-radius: .1rem;
+}
+.form-item textarea{
+    outline: none;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    color: var(--color-background-dark);
+    background-color: var(--color-text-white);
+    outline-style: none;
+    border: none;
+    border-radius: .1rem;
+}
 .form-item input:focus{
     border: 2px solid var(--color-text-yellow) ;
 }

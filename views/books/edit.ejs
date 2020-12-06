@@ -1,9 +1,17 @@
-<h2>Edit Book</h2>
-<br>
 
-<form method="POST"  action="/books/<%= book.id %>?_method=PUT" >
-    <%- include('./_form_fields') %>
+<div class=".new-book-page-container">
+    <div class="section-hero-text center new-book-hero-text">
+        <h2>Edit Book</h2>
+    </div>
+    <div class="new-book-form center">
+        <form  method="POST"  action="/books/<%= book.id %>?_method=PUT">
+            <%- include('./_form_fields') %>
+        <div class="form-btns">
+            <a class="btn btn-primary-red form-btn" href="/books/<%= book.id %>">Cancel</a>
+            <button class="btn btn-primary-yellow form-btn" type="submit">Update</button>
+        </div>
+            
+        </form>
+    </div>
+</div>    
 
-    <a href="/books/<%= book.id %>">Cancel</a>
-    <button type="submit">Update</button>
-</form>
