@@ -157,9 +157,11 @@
         transition: transform .3s ease-in-out;
     }
 
-    .footer img{
+    
+    .footer h3{
 
-        width: 150px;
+       color: var(--color-background-dark);
+       font-weight: 900;
     }
    
 
