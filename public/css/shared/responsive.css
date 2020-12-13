@@ -166,5 +166,136 @@
    
 
 
+    /* authors */
+    .search-author input{
+        width: 250px;
+    }
+    .authors-heading h2{
+        font-size: 50px;
+        margin-bottom: 2rem;
+    }
+    .authors-table{
+        width: 350px;
+        margin-top: 15px;
+        margin-left: 10px;
+       
+    }
+    body .container .authors-grid-container .authors-table table th, td{
+        width:20px;
+        font-size: 15px;
+        
+    }
+    .authors-table table td:first-child{
+        width: 30px;
+        
+    }
+    .authors-table table td:last-child .btn-primary-red{
+        font-size: 15px;
+        padding: 0px;
+        text-align: start;
+       
+        width: fit-content;
+    }
+    .new-book-page-container .section-hero-text{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    .books-page-container .section-hero-text{
+        font-size:  20px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    .books-page-container form{
+        flex-direction: column;
+    }
+    .books-page-container form div{
+        margin: 15px 0px 0px 0px;
+    }
+    .books-page-container form div:first-child{
+        margin: 0px;
+    }
+    .books-page-container .img-grid-container .books-by-the-author-grid{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        display: grid;
+        grid-template-areas: 
+        "a a a"
+        "b b b"
+        "c c c"
+       
+        ;
+        grid-gap: 1rem;
+        background-color: var(--color-text-yellow);
+        width: 230px;
+        min-height: 330px;
+        border-radius:.3rem ;
+        padding: 15px;
+    }
+    .control-btn-container .btn-primary-yellow, .control-btn-container .btn-primary-red{
+        font-size: 20px;
+        width: fit-content;
+        text-align: center;
+        height: fit-content;
+        
+    }
+  
+    .show-book-btn{
+        margin-left: 10px;
+    }
+    
+    .show-book-container .section-hero-text{
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+.img-grid-container .books-by-the-author-grid{
+    grid-template-columns: repeat(1,1fr);
+   
+   
+}
+.books-by-author-text h2{
+    font-size: 25px;
+}
+.books-by-author-text{
+     width: 350px;
+     margin: auto;
+     
+
+}
+.show-author-container .author-name{
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    
+}
+.show-author-container .btn-container a{
+    margin-right: 15px;
+    width: 150px;
+    text-align: center;
+    height: 45px;
+}
+.books-by-the-author-grid{
+    
+}
+.books-by-author-text{
+    margin-top: 0px;
+}
+.show-author-container{
+    margin-top: 4vh;
+}
+.img-grid-container{
+    margin-top: 30px;
+}
+
+.show-author-container .btn-container{
+    margin-bottom: 30px;
+}
+.show-author-container .btn-container .btn{
+    width: 148px;
+    font-size: 25px;
+    height: fit-content;
+}
 }
 
